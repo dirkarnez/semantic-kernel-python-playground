@@ -45,7 +45,7 @@ jobs:
       
       - shell: cmd
         run: |
-          concurrently "%USERPROFILE%\Downloads\llama-server.exe -m Taiwan-LLM-7B-v2.1-chat-Q5_K_M.gguf" ".\run.cmd"
+          concurrently "%USERPROFILE%\Downloads\llama-server.exe -m %USERPROFILE%\Downloads\Taiwan-LLM-7B-v2.1-chat-Q5_K_M.gguf" ".\run.cmd"
 
       - shell: cmd
         run: |

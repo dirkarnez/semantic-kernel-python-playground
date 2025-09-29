@@ -1,0 +1,5 @@
+dotenv==0.9.9
+semantic-kernel==1.37.0
+pydantic==2.11.9
+typing-extensions==4.15.0
+ai-code-sandbox==0.2.0

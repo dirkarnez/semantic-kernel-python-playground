@@ -1,0 +1,26 @@
+name: run-action
+
+on: 
+  push
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # <-- clone with complete history
+          
+      - shell: cmd
+        run: |
+          .\setup.cmd
+          
+      - shell: cmd
+        run: |
+          .\install-packages.cmd
+
+          

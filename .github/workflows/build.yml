@@ -35,15 +35,17 @@ jobs:
           cd /d "%USERPROFILE%\Downloads" &&^
           curl https://huggingface.co/audreyt/Taiwan-LLM-7B-v2.1-chat-GGUF/resolve/main/Taiwan-LLM-7B-v2.1-chat-Q5_K_M.gguf -L -O -J &&^
           dir
-          
-      - shell: cmd
-        run: |
-          cd /d "%USERPROFILE%\Downloads" &&^
-          .\llama-server.exe -m Taiwan-LLM-7B-v2.1-chat-Q5_K_M.gguf
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - run: |
+          npm i -g concurrently
+      
       - shell: cmd
         run: |
-          .\run.cmd
+          concurrently "%USERPROFILE%\Downloads\llama-server.exe -m Taiwan-LLM-7B-v2.1-chat-Q5_K_M.gguf" ".\run.cmd"
 
       - shell: cmd
         run: |

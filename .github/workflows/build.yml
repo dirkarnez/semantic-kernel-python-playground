@@ -28,6 +28,7 @@ jobs:
           cd /d "%USERPROFILE%\Downloads" &&^
           curl https://github.com/ggml-org/llama.cpp/releases/download/b6615/llama-b6615-bin-win-cpu-x64.zip -L -J --output llama.zip &&^
           7z x llama.zip &&^
+          dir
           
       - shell: cmd
         run: |

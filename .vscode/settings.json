@@ -1,4 +1,5 @@
 {
     // "python.defaultInterpreterPath": "${env:USERPROFILE}/Downloads/python-3.10.8-amd64-portable/python.exe"
-    "python.defaultInterpreterPath": "D:/Softwares/python-3.10.8-amd64-portable/python.exe"
+    "python.defaultInterpreterPath": "D:/Softwares/python-3.10.8-amd64-portable/python.exe",
+    "debugpy.debugJustMyCode": false,
 }

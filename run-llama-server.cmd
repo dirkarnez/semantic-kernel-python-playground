@@ -9,5 +9,6 @@ set DOWNLOADS_DIR=^
 
 cd /d "%DOWNLOADS_DIR%\llama-b6615-bin-win-cpu-x64"
 
-.\llama-server.exe --port 8081 -m %DOWNLOADS_DIR%\Taiwan-LLM-7B-v2.1-chat-Q5_K_M.gguf
+.\llama-server.exe --help
+.\llama-server.exe --jinja --port 8081 -m %DOWNLOADS_DIR%\Taiwan-LLM-7B-v2.1-chat-Q5_K_M.gguf
 pause

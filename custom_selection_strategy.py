@@ -59,10 +59,13 @@ class CustomSelectionStrategy(SelectionStrategy):
 
             chat_history.add_user_message("Now follow the rules and select the next agent by typing the agent's index.")
 
+            from semantic_kernel.connectors.ai.open_ai.prompt_execution_settings.open_ai_prompt_execution_settings import (
+                OpenAIChatPromptExecutionSettings,
+            )
             for _ in range(self.NUM_OF_RETRIES):
                 completion = await self.chat_completion_service.get_chat_message_content(
                     chat_history,
-                    AzureChatPromptExecutionSettings(),
+                    OpenAIChatPromptExecutionSettings(),
                 )
 
                 if completion is None:

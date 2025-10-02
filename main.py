@@ -27,29 +27,32 @@ https://learn.microsoft.com/semantic-kernel/support/migration/group-chat-orchest
 """
 
 TASK = """
-Create a blog post to share technical details about the Semantic Kernel AI connectors.
-The content of the blog post should include the following:
-1. What are AI connectors in Semantic Kernel?
-2. How do people use AI connectors in Semantic Kernel?
-3. How do devs create custom AI connectors in Semantic Kernel?
-    - Include a walk through of creating a custom AI connector. 
-      The connector may not connect to a real service, but should demonstrate the process.
-    - Include a sample on how to use the connector.
-    - If a reader follows the walk through and the sample, they should be able to run the connector.
-
-
-Here is the file that contains the source code for the base class of the AI connectors:
-semantic_kernel/connectors/ai/chat_completion_client_base.py
-semantic_kernel/services/ai_service_client_base.py
-
-Here are some files containing the source code that may be useful:
-semantic_kernel/connectors/ai/ollama/services/ollama_chat_completion.py
-semantic_kernel/connectors/ai/open_ai/services/open_ai_chat_completion_base.py
-semantic_kernel/contents/chat_history.py
-
-If you want to reference the implementations of other AI connectors, you can find them under the following directory:
-semantic_kernel/connectors/ai
+Create a blog post to teach python programming language for beginners 
 """
+# TASK = """
+# Create a blog post to share technical details about the Semantic Kernel AI connectors.
+# The content of the blog post should include the following:
+# 1. What are AI connectors in Semantic Kernel?
+# 2. How do people use AI connectors in Semantic Kernel?
+# 3. How do devs create custom AI connectors in Semantic Kernel?
+#     - Include a walk through of creating a custom AI connector. 
+#       The connector may not connect to a real service, but should demonstrate the process.
+#     - Include a sample on how to use the connector.
+#     - If a reader follows the walk through and the sample, they should be able to run the connector.
+
+
+# Here is the file that contains the source code for the base class of the AI connectors:
+# semantic_kernel/connectors/ai/chat_completion_client_base.py
+# semantic_kernel/services/ai_service_client_base.py
+
+# Here are some files containing the source code that may be useful:
+# semantic_kernel/connectors/ai/ollama/services/ollama_chat_completion.py
+# semantic_kernel/connectors/ai/open_ai/services/open_ai_chat_completion_base.py
+# semantic_kernel/contents/chat_history.py
+
+# If you want to reference the implementations of other AI connectors, you can find them under the following directory:
+# semantic_kernel/connectors/ai
+# """
 
 load_dotenv()
 # AZURE_APP_INSIGHTS_CONNECTION_STRING = os.getenv("AZURE_APP_INSIGHTS_CONNECTION_STRING")
@@ -111,7 +114,7 @@ async def main():
         group_chat = AgentGroupChat(
             agents=agents,
             termination_strategy=CustomTerminationStrategy(agents=agents),
-            selection_strategy=CustomSelectionStrategy(),
+            # selection_strategy=CustomSelectionStrategy(),
         )
         await group_chat.add_chat_message(
             ChatMessageContent(

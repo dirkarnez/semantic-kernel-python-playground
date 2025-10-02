@@ -27,7 +27,7 @@ https://learn.microsoft.com/semantic-kernel/support/migration/group-chat-orchest
 """
 
 TASK = """
-Create a blog post in markdown named "GENERATED_DOCUMENT.md" at base directory to teach python programming language for beginners 
+Create a blog post in markdown at base directory with file name GENERATED_DOCUMENT.md to teach python programming language for beginners 
 """
 # TASK = """
 # Create a blog post to share technical details about the Semantic Kernel AI connectors.

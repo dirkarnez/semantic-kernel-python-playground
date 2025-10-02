@@ -4,6 +4,7 @@ semantic-kernel-python-playground
 
 
 ### TODOs
+- [ ] [群組聊天協調流程移轉指南 | Microsoft Learn](https://learn.microsoft.com/zh-tw/semantic-kernel/support/migration/group-chat-orchestration-migration-guide?pivots=programming-language-python)
 - [ ] https://github.com/microsoft/semantic-kernel/blob/main/python/samples/concepts/local_models/lm_studio_text_embedding.py
 - [ ] https://github.com/microsoft/semantic-kernel/blob/main/python/semantic_kernel/connectors/ai/open_ai/settings/open_ai_settings.py
       

@@ -72,7 +72,7 @@ class CustomAgentBase(ChatCompletionAgent, ABC):
                 from openai import AsyncOpenAI
                 return OpenAIChatCompletion(instruction_role=instruction_role, async_client=AsyncOpenAI(
                     api_key="fake_key",  # This cannot be an empty string, use a fake key
-                    base_url="http://localhost:8080/v1",
+                    base_url="http://localhost:8081/v1",
                 ))
             case _:
                 raise ValueError(

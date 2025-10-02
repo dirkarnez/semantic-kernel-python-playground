@@ -30,7 +30,7 @@ class CustomSelectionStrategy(SelectionStrategy):
 
     chat_completion_service: ChatCompletionClientBase = Field(default_factory=lambda: OpenAIChatCompletion(async_client=AsyncOpenAI(
         api_key="fake_key",  # This cannot be an empty string, use a fake key
-        base_url="http://localhost:8080/v1",
+        base_url="http://localhost:8081/v1",
     )))
 
     async def next(self, agents: list["Agent"], history: list["ChatMessageContent"]) -> "Agent":
